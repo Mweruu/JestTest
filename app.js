@@ -14,7 +14,7 @@ app.use((error,req,res,next)=>{
 });
 
 app.get("/", (req,res)=>{
-    res.json("Hello world");
+    res.json("Hello worggld");
         // res.send("Hello world");
 });
 

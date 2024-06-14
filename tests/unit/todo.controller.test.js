@@ -19,6 +19,8 @@ beforeEach(()=>{
     req = httpMocks.createRequest();
     res= httpMocks.createResponse();
     next = jest.fn();
+    console.log("23334",res.statusCode, req, next)
+
 });
 
 describe("TodoController.deleteTodo", ()=>{
@@ -29,6 +31,7 @@ describe("TodoController.deleteTodo", ()=>{
     it("should call findByIdAndDelete", async()=>{
         // req.body = newTodo;
         req.params.todoId = todoId;
+        console.log(todoId)
         await TodoController.deleteTodo(req,res,next);
         expect(TodoModel.findByIdAndDelete).toBeCalledWith(todoId);
     });
