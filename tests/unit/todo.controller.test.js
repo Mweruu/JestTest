@@ -19,8 +19,6 @@ beforeEach(()=>{
     req = httpMocks.createRequest();
     res= httpMocks.createResponse();
     next = jest.fn();
-    console.log("23334",res.statusCode, req, next)
-
 });
 
 describe("TodoController.deleteTodo", ()=>{
